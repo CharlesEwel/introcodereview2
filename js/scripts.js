@@ -65,14 +65,21 @@ $(document).ready(function() {
     $("#progress4").removeClass();
     $("#progress4").addClass("glyphicon glyphicon-pencil");
     $("#finalsubmit").show();
+
+    if(parseInt($("#foreigners").val())===551) {
+      alert("Due to previous warnings from the US Marshall's service we sadly cannot book you any international trips based on your answer to the previous questions. However, we'll still be happy to find you a vacation destination here in the states");
+    } else if(parseInt($("#foreigners").val())===559 && ( -1 >= extractPrice($("#price").val() )) ) {
+      alert("We see that you have indicated a strong desire to travel to another country. We will try our best to match you with a foreign vacation spot, but please bear in mind that international travel can be quite expensive. Based on your previous answers we see that that might be an issue for you, so sadly we cannot guarantee you an international match");
+    }
+
     event.preventDefault();
   });
 
   $("button#flavortocustom").click(function() {
     $("#customs").show();
     $("#flavor").hide();
-    $("#finalsubmit").hide();
-    $("#output").hide();
+    $("#finalsubmit").fadeOut();
+    $("#output").fadeOut();
     $("#progress3").removeClass();
     $("#progress3").addClass("glyphicon glyphicon-pencil");
     $("#progress4").removeClass();
@@ -187,7 +194,7 @@ $(document).ready(function() {
       }
     }
 
-    $('#output').show();
+    $('#output').fadeIn();
 
   });
 });
