@@ -1,4 +1,4 @@
-//Buisiness Logic
+//Business Logic
 
 var extractTemp = function(rawInput){
   return parseInt(rawInput.charAt(0))-5;
@@ -11,6 +11,8 @@ var extractPrice = function(rawInput){
 var extractAdventure = function(rawInput){
   return parseInt(rawInput.charAt(2))-5;
 };
+
+//Front End Logic
 
 $(document).ready(function() {
   $("form#vacation-suggester").submit(function(event) {

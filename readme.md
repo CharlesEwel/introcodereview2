@@ -6,7 +6,7 @@
 
 ## Description
 
-This website makes use of forms and branching to suggest a vacation destination that is dependend on user input.
+This website makes use of forms and branching to suggest a vacation destination that is dependent on user input.
 
 ## Setup/Installation Requirements
 
