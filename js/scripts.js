@@ -18,13 +18,21 @@ $(document).ready(function() {
 
     var temp=0;
     temp += extractTemp($("#climate").val());
-
+    temp += extractTemp($("#book").val());
+    temp += extractTemp($("#photo").val());
+    temp += extractTemp($("#foreigners").val());
     var price=0;
     price += extractPrice($("#price").val());
+    price += extractPrice($("#book").val());
+    price += extractPrice($("#photo").val());
+    price += extractPrice($("#foreigners").val());
 
     var adventure=0;
     adventure += extractAdventure($("#adventure").val());
-    
+    adventure += extractAdventure($("#book").val());
+    adventure += extractAdventure($("#photo").val());
+    adventure += extractAdventure($("#foreigners").val());
+
     if(temp >= 4) {
       if(price >= 4) {
         if(adventure >= 4) {
