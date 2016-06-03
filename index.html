@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vacation Suggester</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="contatiner">
+      <form id="vacation-suggester">
+       <div class="form-group">
+         <label for="climate">What kind of climate do you like?</label>
+         <select class="form-control" id="climate">
+            <option value="955">Strongly Prefer Hot Weather</option>
+            <option value="755">Slightly Prefer Hot Weather</option>
+            <option value="555">Temperature is not important to me</option>
+            <option value="355">Slightly Prefer Cold Weather</option>
+            <option value="155">Strongly Prefer Cold Weather</option>
+         </select>
+       </div>
+
+       <div class="form-group">
+         <label for="price">How much are you trying to spend?</label>
+         <select class="form-control" id="price">
+           <option value="595">A Very Large Amount</option>
+           <option value="575">A Large Amount</option>
+           <option value="555">A Medium Amount</option>
+           <option value="535">A Smaller Amount</option>
+           <option value="515">A Very Small Amount</option>
+         </select>
+       </div>
+
+       <div class="form-group">
+         <label for="adventure">How adventurous would you describe yourself as?</label>
+         <select class="form-control" id="adventure">
+           <option value="559">Call me Indiana Jones!</option>
+           <option value="557">Other cultures fascinate me, as does the great outdoors.</option>
+           <option value="555">I enjoy the occassional new experience but also like modern amenities</option>
+           <option value="553">I'll participate in the odd expedition as long as I've got my sunscreen, fanny pack, bug repellent, maps, phrase guide, shirpa, walking poles, etc.... </option>
+           <option value="551">Ordering the meatloaf off the room service menu is about as adventurous as I get</option>
+         </select>
+       </div>
+       <button type="submit" class="btn">Where Should I Go?</button>
+     </form>
+     <div class="container" id="output">
+       You're best fit destination is <span class="destination"></span>. Thank you for booking with CharlieTravel
+     </div>
+    </div>
+  </body>
+</html>
