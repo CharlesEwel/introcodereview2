@@ -16,6 +16,10 @@ $(document).ready(function() {
   $("form#vacation-suggester").submit(function(event) {
     event.preventDefault();
 
+    var adventureForeign=(parseInt($("#adventure2").val())===0);
+    var foreignBanned=(parseInt($("#foreigners").val())===551)
+    var foreignMust=(parseInt($("#foreigners").val())===559)
+
     var temp=0;
     temp += extractTemp($("#climate").val());
     temp += extractTemp($("#book").val());
@@ -35,7 +39,7 @@ $(document).ready(function() {
 
     if(temp >= 4) {
       if(price >= 4) {
-        if(adventure >= 4) {
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))) {
           $(".destination").text("Egypt")
         } else if(adventure > -4) {
           $(".destination").text("Hawaii")
@@ -43,9 +47,9 @@ $(document).ready(function() {
           $(".destination").text("Myrtle Beach")
         }
       } else if(price > -4){
-        if(adventure >= 4){
+        if(adventure >= 4 && foreignBanned===false){
           $(".destination").text("Thailand")
-        } else if(adventure > -4){
+        } else if((foreignMust===true)||((adventure > -4 || (adventure > -2 && adventureForeign))&&(foreignBanned===false))) {
           $(".destination").text("Mexico")
         } else {
           $(".destination").text("Corpus Christi")
@@ -61,7 +65,7 @@ $(document).ready(function() {
       }
     } else if(temp > -4){
       if(price >= 4){
-        if(adventure >= 4){
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))){
           $(".destination").text("Paris")
         } else if(adventure > -4){
           $(".destination").text("Yosemite")
@@ -69,7 +73,7 @@ $(document).ready(function() {
           $(".destination").text("New York")
         }
       } else if(price > -4){
-        if(adventure >= 4){
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))){
           $(".destination").text("Rio de Janeiro")
         } else if(adventure > -4){
           $(".destination").text("Redwood Forests")
@@ -87,7 +91,7 @@ $(document).ready(function() {
       }
     } else {
       if(price >= 4){
-        if(adventure >= 4){
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))){
           $(".destination").text("St Petersburg")
         } else if(adventure > -4){
           $(".destination").text("Vale")
@@ -95,7 +99,7 @@ $(document).ready(function() {
           $(".destination").text("Vermont")
         }
       } else if(price > -4){
-        if(adventure >= 4){
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))){
           $(".destination").text("Iceland")
         } else if(adventure > -4){
           $(".destination").text("Wyoming")
@@ -103,7 +107,7 @@ $(document).ready(function() {
           $(".destination").text("Seattle")
         }
       } else {
-        if(adventure >= 4){
+        if((foreignMust===true)||((adventure >= 4 || (adventure > 2 && adventureForeign)) && (foreignBanned===false))){
           $(".destination").text("Alaska")
         } else if(adventure > -4){
           $(".destination").text("Mt. Hood")
