@@ -15,12 +15,80 @@ var extractAdventure = function(rawInput){
 //Front End Logic
 
 $(document).ready(function() {
-  $("form#vacation-suggester").submit(function(event) {
+
+  $("button#personaltobasic").click(function() {
+    $("#personalinfo").hide();
+    $("#basics").show();
+    $("#progress1").removeClass();
+    $("#progress1").addClass("glyphicon glyphicon-ok");
+    $("#progress2").removeClass();
+    $("#progress2").addClass("glyphicon glyphicon-pencil");
+    $('.name').text($("input#name").val());
+    event.preventDefault();
+  });
+
+  $("button#basictopersonal").click(function() {
+    $("#personalinfo").show();
+    $("#basics").hide();
+    $("#progress2").removeClass();
+    $("#progress2").addClass("glyphicon glyphicon-remove");
+    $("#progress1").removeClass();
+    $("#progress1").addClass("glyphicon glyphicon-pencil");
+    event.preventDefault();
+  });
+
+  $("button#basictocustom").click(function() {
+    $("#customs").show();
+    $("#basics").hide();
+    $("#progress2").removeClass();
+    $("#progress2").addClass("glyphicon glyphicon-ok");
+    $("#progress3").removeClass();
+    $("#progress3").addClass("glyphicon glyphicon-pencil");
+    event.preventDefault();
+  });
+
+  $("button#customtobasic").click(function() {
+    $("#customs").hide();
+    $("#basics").show();
+    $("#progress2").removeClass();
+    $("#progress2").addClass("glyphicon glyphicon-pencil");
+    $("#progress3").removeClass();
+    $("#progress3").addClass("glyphicon glyphicon-remove");
+    event.preventDefault();
+  });
+
+  $("button#customtoflavor").click(function() {
+    $("#customs").hide();
+    $("#flavor").show();
+    $("#progress3").removeClass();
+    $("#progress3").addClass("glyphicon glyphicon-ok");
+    $("#progress4").removeClass();
+    $("#progress4").addClass("glyphicon glyphicon-pencil");
+    $("#finalsubmit").show();
+    event.preventDefault();
+  });
+
+  $("button#flavortocustom").click(function() {
+    $("#customs").show();
+    $("#flavor").hide();
+    $("#finalsubmit").hide();
+    $("#output").hide();
+    $("#progress3").removeClass();
+    $("#progress3").addClass("glyphicon glyphicon-pencil");
+    $("#progress4").removeClass();
+    $("#progress4").addClass("glyphicon glyphicon-remove");
+    event.preventDefault();
+  });
+
+  $("button#submitfinal").click(function(event) {
     event.preventDefault();
 
+    $("#progress4").removeClass();
+    $("#progress4").addClass("glyphicon glyphicon-ok");
+
     var adventureForeign=(parseInt($("#adventure2").val())===0);
-    var foreignBanned=(parseInt($("#foreigners").val())===551)
-    var foreignMust=(parseInt($("#foreigners").val())===559)
+    var foreignBanned=(parseInt($("#foreigners").val())===551);
+    var foreignMust=(parseInt($("#foreigners").val())===559);
 
     var temp=0;
     temp += extractTemp($("#climate").val());

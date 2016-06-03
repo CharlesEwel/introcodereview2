@@ -10,85 +10,112 @@
   </head>
   <body>
     <div class="contatiner">
+      <h1 class="center">Welcome to CharlieTravel</h1>
       <form id="vacation-suggester">
         <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="climate">What kind of climate do you like?</label>
-              <select class="form-control" id="climate">
-                <option value="955">Hotter than Heck</option>
-                <option value="755">Sunny enough that I can continue my quest to resemble a human baseball glove</option>
-                <option value="555">Temperature is not important to me</option>
-                <option value="355">Chilly enough that I won't need to put my beer in the fridge</option>
-                <option value="155">Colder than my frozen heart</option>
-              </select>
-            </div>
-            <div class="form-group">
-             <label for="price">How much are you trying to spend?</label>
-              <select class="form-control" id="price">
-                <option value="595">($$$$$) Do you take AmEx Black?</option>
-                <option value="575">($$$$) Dolla dolla bills y'all</option>
-                <option value="555">($$$) Talking about money makes me uncomfortable so I'm selecting the middle option</option>
-                <option value="535">($$) I go on vacations so I can practice my haggling with street vendors of different nationalities</option>
-                <option value="515">($) I was under the impression you'd be paying me, is that not correct</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="adventure">How adventurous would you describe yourself as?</label>
-              <select class="form-control" id="adventure">
-                <option value="559">Call me Indiana Jones!</option>
-                <option value="557">Other cultures fascinate me, as does the great outdoors.</option>
-                <option value="555">I enjoy the occassional new experience but also like modern amenities</option>
-                <option value="553">I'll participate in the odd expedition as long as I've got my sunscreen, fanny pack, bug repellent, maps, phrase guide, shirpa, walking poles, etc.... </option>
-                <option value="551">Ordering the meatloaf off the room service menu is about as adventurous as I get</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="adventure2">In the context of answering the previous question, which of these activites would you consider more 'adventurous'</label>
-              <select class="form-control" id="adventure2">
-                <option value="0">Travelling solo to a foreign country where you don't speak the language and know nobody</option>
-                <option value="1">Bungee jumping over a pit of scorpions</option>
-              </select>
-            </div>
+          <div class="col-md-3">
+            <h3 class="center">Progress Bar</h3>
+            <ol>
+              <li>Personal Info <b id="progress1" class="glyphicon glyphicon-pencil"></b></li>
+              <li>The Basics <b id="progress2" class="glyphicon glyphicon-remove"></b></li>
+              <li>International Customs <b id="progress3" class="glyphicon glyphicon-remove"></b></li>
+              <li>Flavor and Personality <b id="progress4" class="glyphicon glyphicon-remove"></b></li>
+            </ol>
           </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="book">You decide you are going to read a book on your vacation. Where would be the ideal place to sit down and do that?</label>
-              <select class="form-control" id="book">
-                <option value="474">A hip cafe downtown where you can people watch while pretending to read</option>
-                <option value="864">A sunny beach with the waves lapping at your feet</option>
-                <option value="238">In a remote part of the woods free from the noise and bustle of civilization</option>
-                <option value="644">Read a book? Ha!</option>
-              </select>
+          <!--Having the columns sum up to 11 is intentional so it doesn't extend all the way out to the right on large screens-->
+          <div class="col-md-8">
+            <div id="personalinfo">
+              <div class="form-group">
+                <label for="name">Please Enter Your Name:</label>
+                <input id="name" class="form-control" type="text">
+              </div>
+              <button type="submit" class="btn" id="personaltobasic">Next Section</button>
             </div>
-            <div class="form-group">
-              <label for="photo">On returning from your vacation you decide to update your timeline photo on facebook with a picture from your trip, which would you choose?</label>
-              <select class="form-control" id="photo">
-                <option value="479">You posing in front of a famous monument </option>
-                <option value="347">A scenic waterfall that was at the end of your 12 mile hike</option>
-                <option value="777">The exotic meal that was served for dinner on the final night</opt7ion>
-                <option value="533">A group photo with all the friends you made on your trip. No doubt taken via selfie-stick because you are the absolute worst</option>
-                <option value="565">The lens cap on your camera</option>
-              </select>
+            <div id="basics">
+              <div class="form-group">
+                <label for="climate">What kind of climate do you like?</label>
+                <select class="form-control" id="climate">
+                  <option value="955">Hotter than Heck</option>
+                  <option value="755">Sunny enough that I can continue my quest to resemble a human baseball glove</option>
+                  <option value="555">Temperature is not important to me</option>
+                  <option value="355">Chilly enough that I won't need to put my beer in the fridge</option>
+                  <option value="155">Colder than my frozen heart</option>
+                </select>
+              </div>
+              <div class="form-group">
+               <label for="price">How much are you trying to spend?</label>
+                <select class="form-control" id="price">
+                  <option value="595">($$$$$) Do you take AmEx Black?</option>
+                  <option value="575">($$$$) Dolla dolla bills y'all</option>
+                  <option value="555">($$$) Talking about money makes me uncomfortable so I'm selecting the middle option</option>
+                  <option value="535">($$) I go on vacations so I can practice my haggling with street vendors of different nationalities</option>
+                  <option value="515">($) I was under the impression you'd be paying me, is that not correct</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="adventure">How adventurous would you describe yourself as?</label>
+                <select class="form-control" id="adventure">
+                  <option value="559">Call me Indiana Jones!</option>
+                  <option value="557">Other cultures fascinate me, as does the great outdoors.</option>
+                  <option value="555">I enjoy the occassional new experience but also like modern amenities</option>
+                  <option value="553">I'll participate in the odd expedition as long as I've got my sunscreen, fanny pack, bug repellent, maps, phrase guide, shirpa, walking poles, etc.... </option>
+                  <option value="551">Ordering the meatloaf off the room service menu is about as adventurous as I get</option>
+                </select>
+              </div>
+              <button type="submit" class="btn" id="basictopersonal">Previous Section</button>
+              <button type="submit" class="btn" id="basictocustom">Next Section</button>
             </div>
-            <div class="form-group">
-              <label for="foreigners">How do you feel about other countries and cultures?</label>
-              <select class="form-control" id="foreigners">
-                <option value="559">I love other countries, in fact I'd say adding another stamp to my passport is a 'must' for this trip</option>
-                <option value="557">I'd like to explore the world, though there are sections of the US I've never been to that I'd be down to visit too.</option>
-                <option value="555">It has been my experience that people are people everywhere, as such I am utterly indifferent</opt7ion>
-                <option value="553">They're hilarious! The secret is to speak loudly and slowly and don't forget to remind them who kicked their ass in WWII</option>
-                <option value="551">The judge says I'm not technically supposed to leave the states</option>
-              </select>
+            <div id="customs">
+              <div class="form-group">
+                <label for="adventure2">In the context of answering the previous question, which of these activites would you consider more 'adventurous'</label>
+                <select class="form-control" id="adventure2">
+                  <option value="0">Travelling solo to a foreign country where you don't speak the language and know nobody</option>
+                  <option value="1">Bungee jumping over a pit of scorpions</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="foreigners">How do you feel about other countries and cultures?</label>
+                <select class="form-control" id="foreigners">
+                  <option value="559">I love other countries, in fact I'd say adding another stamp to my passport is a 'must' for this trip</option>
+                  <option value="557">I'd like to explore the world, though there are sections of the US I've never been to that I'd be down to visit too.</option>
+                  <option value="555">It has been my experience that people are people everywhere, as such I am utterly indifferent</opt7ion>
+                  <option value="553">They're hilarious! The secret is to speak loudly and slowly and don't forget to remind them who kicked their ass in WWII</option>
+                  <option value="551">The judge says I'm not technically supposed to leave the states</option>
+                </select>
+              </div>
+              <button type="submit" class="btn" id="customtobasic">Previous Section</button>
+              <button type="submit" class="btn" id="customtoflavor">Next Section</button>
+            </div>
+            <div id="flavor">
+              <div class="form-group">
+                <label for="book">You decide you are going to read a book on your vacation. Where would be the ideal place to sit down and do that?</label>
+                <select class="form-control" id="book">
+                  <option value="474">A hip cafe downtown where you can people watch while pretending to read</option>
+                  <option value="864">A sunny beach with the waves lapping at your feet</option>
+                  <option value="238">In a remote part of the woods free from the noise and bustle of civilization</option>
+                  <option value="644">Read a book? Ha!</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="photo">On returning from your vacation you decide to update your timeline photo on facebook with a picture from your trip, which would you choose?</label>
+                <select class="form-control" id="photo">
+                  <option value="479">You posing in front of a famous monument </option>
+                  <option value="347">A scenic waterfall that was at the end of your 12 mile hike</option>
+                  <option value="777">The exotic meal that was served for dinner on the final night</opt7ion>
+                  <option value="533">A group photo with all the friends you made on your trip. No doubt taken via selfie-stick because you are the absolute worst</option>
+                  <option value="565">The lens cap on your camera</option>
+                </select>
+              </div>
+              <button type="submit" class="btn" id="flavortocustom">Previous Section</button>
             </div>
           </div>
         </div>
         <div class="container" id="finalsubmit">
-          <button type="submit" class="btn">Where Should I Go?</button>
+          <button type="submit" class="btn" id="submitfinal">Where Should I Go?</button>
         </div>
      </form>
      <div class="container" id="output">
-       Your best fit destination is <span class="destination"></span>. Thank you for booking with CharlieTravel.
+       Hi <span class="name"></span>, your best fit destination is <span class="destination"></span>. Thank you for booking with CharlieTravel.
      </div>
     </div>
   </body>
